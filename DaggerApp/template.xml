@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<template
+    format="2"
+    revision="2"
+    name="MVPDagger Application"
+    minApi="7"
+    minBuildApi="14"
+    description="Creates a new MVP Application">
+
+    <category value="MadDev" />
+    <formfactor value="Mobile" />
+
+    <parameter
+        id="applicationName"
+        name="Application Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="CustomApplication"
+        help="The name of the application to create" />
+
+    <parameter
+        id="applicationComponentName"
+        name="Dagger App Component Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="ApplicationComponent"
+        help="The name of the dagger application component to create" />
+
+    <parameter
+        id="applicationModuleName"
+        name="App Module Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="AppModule"
+        help="The name of the dagger application module to create" />    
+
+    <parameter
+            id="packageName"
+            name="Package name"
+            type="string"
+            constraints="package"
+            default="com.mycompany.myapp"/>
+
+    <parameter
+            id="daggerPackageName"
+            name="Dagger Package name"
+            type="string"
+            constraints="unique|nonempty"
+            default="dagger"/>
+
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>  
