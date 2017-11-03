@@ -5,7 +5,7 @@
     name="MVPDagger Activity"
     minApi="7"
     minBuildApi="14"
-    description="Creates a new MVP activity">
+    description="Creates a new MVP Dagger activity">
 
     <category value="MadDev" />
     <formfactor value="Mobile" />
@@ -79,10 +79,10 @@
 
     <parameter
             id="packageName"
-            name="Package name"
+            name="Application Package name"
             type="string"
             constraints="package"
-            default="com.mycompany.myapp.${camelCaseToUnderscore(featureName)}"/>
+            default="com.mycompany.myapp"/>
 
 
     <globals file="globals.xml.ftl" />

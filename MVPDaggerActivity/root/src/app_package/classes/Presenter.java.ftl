@@ -1,4 +1,4 @@
-package ${packageName};
+package ${featurePackage};
 
 import javax.inject.Inject;
 

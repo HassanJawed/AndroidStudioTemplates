@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="false"
-    tools:context=".${relativePackage}.${activityClass}">
+    tools:context=".${relativeFeaturePackage}.${activityClass}">
 
     <include layout="@layout/layout_app_bar" />
 

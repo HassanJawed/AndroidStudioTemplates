@@ -8,7 +8,7 @@
 		android:layout_height="match_parent"
 		app:layout_behavior="@string/appbar_scrolling_view_behavior"
 		tools:showIn="@layout/${layoutName}"
-    	tools:context=".${relativePackage}.${activityClass}"
+    	tools:context=".${relativeFeaturePackage}.${activityClass}"
 		>
 
 		<TextView
