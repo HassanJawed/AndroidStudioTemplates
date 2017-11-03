@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<template
+    format="2"
+    revision="2"
+    name="MVPDagger Activity"
+    minApi="7"
+    minBuildApi="14"
+    description="Creates a new MVP activity">
+
+    <category value="MadDev" />
+    <formfactor value="Mobile" />
+
+    <parameter
+        id="featureName"
+        name="Feature Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="SignUp"
+        help="The name of the feature to create" />
+
+    <parameter
+        id="activityClass"
+        name="Activity Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        suggest="${layoutToActivity(layoutName)}"
+        default="MainActivity"
+        help="The name of the activity class to create" />
+
+    <parameter
+        id="layoutName"
+        name="Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="activity_${camelCaseToUnderscore(featureName)}"
+        default="activity_sign_up"
+        help="The name of the layout to create for the activity" />
+
+    <parameter
+        id="contentLayoutName"
+        name="Content Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="content_${camelCaseToUnderscore(featureName)}"
+        default="content_sign_up"
+        help="The name of the layout to create for the activity" />
+
+    <parameter
+        id="isLauncher"
+        name="Launcher Activity"
+        type="boolean"
+        default="false"
+        help="If true, this activity will have a CATEGORY_LAUNCHER intent filter, making it visible in the launcher" />
+
+    <parameter
+        id="supportBackNavigation"
+        name="Support Back Navigation"
+        type="boolean"
+        default="false"
+        help="If true, this activity will have a back button in the toolbar" />
+
+    <parameter
+        id="presenterClass"
+        name="Presenter Name"
+        type="string"
+        constraints="class|nonempty|unique"
+        default="SignUpPresenter"
+        suggest="${featureName}Presenter"
+        help="The name of the Presenter to create" />
+
+    <parameter
+        id="contractClass"
+        name="Contract Name"
+        type="string"
+        constraints="nonempty|unique"
+        default="SignUpContract"
+        suggest="${featureName}Contract"
+        help="The name of the Contract to create" />
+
+    <parameter
+            id="packageName"
+            name="Package name"
+            type="string"
+            constraints="package"
+            default="com.mycompany.myapp.${camelCaseToUnderscore(featureName)}"/>
+
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>  
