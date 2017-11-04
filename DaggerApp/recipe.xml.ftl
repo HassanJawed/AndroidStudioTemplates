@@ -4,6 +4,9 @@
     <instantiate from="src/app_package/classes/Application.java.ftl"
       to="${escapeXmlAttribute(srcOut)}/${applicationName}.java" />
 
+	<instantiate from="src/app_package/classes/Api.java.ftl"
+      to="${escapeXmlAttribute(srcOut)}/${apiName}.java" />
+
       <!-- Dagger -->
 	<instantiate from="src/app_package/classes/AndroidBindingModule.java.ftl"
       to="${escapeXmlAttribute(srcOut)}/dagger/AndroidBindingModule.java" />
@@ -13,4 +16,8 @@
 
     <instantiate from="src/app_package/classes/AppModule.java.ftl"
       to="${escapeXmlAttribute(srcOut)}/dagger/${applicationModuleName}.java" />
+
+    <instantiate from="src/app_package/classes/NetModule.java.ftl"
+      to="${escapeXmlAttribute(srcOut)}/dagger/NetModule.java" />
+
 </recipe>

@@ -35,6 +35,14 @@
         help="The name of the dagger application module to create" />    
 
     <parameter
+        id="apiName"
+        name="WebService Api Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="${applicationName}?remove_ending('Application')"
+        help="The name of your api class to create" />    
+
+    <parameter
             id="packageName"
             name="Package name"
             type="string"
