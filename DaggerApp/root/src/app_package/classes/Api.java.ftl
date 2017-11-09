@@ -15,4 +15,9 @@ public interface ${apiName} {
 	//@POST("methodName")
     //Call<TResponse> methodName(@Body TRequestModel requestModel);
 
+    //@Multipart
+	//@POST("methodName")
+    //Call<TResponse> methodName(@Part(Constants.ACTION_ID) RequestBody actionId);
+
+
 }

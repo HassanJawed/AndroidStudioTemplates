@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<template
+    format="2"
+    revision="2"
+    name="RxRetro Helpers"
+    minApi="7"
+    minBuildApi="14"
+    description="Creates a RxRetro Net helper classes">
+
+    <category value="MadDev" />
+    <formfactor value="Mobile" />
+
+    <parameter
+            id="packageName"
+            name="Package name"
+            type="string"
+            constraints="package"
+            default="com.mycompany.myapp"/>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>  
